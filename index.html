@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LostFound – Item Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📦 LostFound</h1>
+    <p class="subtitle">Drag folders to reorder them. Drag items between folders to recategorize.</p>
+  </header>
+
+  <main>
+    <!-- Toolbar -->
+    <div class="toolbar">
+      <button id="addFolderBtn">➕ New Folder</button>
+      <input id="folderNameInput" type="text" placeholder="Folder name…" maxlength="40" />
+    </div>
+
+    <!-- Folder grid – folders are rendered here dynamically -->
+    <div id="folderGrid" class="folder-grid"></div>
+
+    <!-- Item palette -->
+    <section class="palette-section">
+      <h2>Unassigned Items</h2>
+      <p class="hint">Drag an item into a folder above to categorise it, or drag it back here.</p>
+      <div id="palette" class="folder-body palette" data-folder-id="palette">
+        <!-- Pre-seeded items added by script.js -->
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
